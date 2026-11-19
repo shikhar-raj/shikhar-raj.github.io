@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shikhar Raj · Data Management Engineer</title>
+<meta name="description" content="Portfolio of Shikhar Raj, Data Management Engineer at Deloitte working on document intelligence, GenAI and agentic systems.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%234f46e5'/><text x='32' y='43' font-size='32' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'>SR</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f8fc; --surface:#ffffff; --surface2:#eef0f8; --text:#141827; --muted:#5b6379; --line:#e2e5f0;
+  --accent:#4f46e5; --accent2:#06b6d4; --accent-soft:rgba(79,70,229,.10); --shadow:0 10px 30px rgba(30,35,80,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0e1a; --surface:#131828; --surface2:#1a2036; --text:#e9ecf8; --muted:#9aa3bd; --line:#262d47;
+    --accent:#818cf8; --accent2:#22d3ee; --accent-soft:rgba(129,140,248,.14); --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0e1a; --surface:#131828; --surface2:#1a2036; --text:#e9ecf8; --muted:#9aa3bd; --line:#262d47;
+  --accent:#818cf8; --accent2:#22d3ee; --accent-soft:rgba(129,140,248,.14); --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:84px 0}
+h2{font-size:clamp(1.6rem,3vw,2.1rem);letter-spacing:-.02em;margin-bottom:8px}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px}
+.lead{color:var(--muted);max-width:640px;margin-bottom:36px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;transition:.2s;font-family:inherit}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);text-decoration:none}
+.btn.primary{background:linear-gradient(135deg,var(--accent),#7c3aed);color:#fff;border:none}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+.chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.74rem;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin:3px 4px 3px 0}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:-.02em;color:var(--text)}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:4px;align-items:center}
+.links a{color:var(--muted);font-size:.9rem;font-weight:500;padding:8px 12px;border-radius:8px}
+.links a:hover,.links a.active{color:var(--text);background:var(--surface2);text-decoration:none}
+.icon-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;font-size:1rem}
+.burger{display:none}
+@media(max-width:820px){
+  .burger{display:inline-block}
+  .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--surface);border-bottom:1px solid var(--line);padding:10px 20px;display:none}
+  .links.open{display:flex}
+}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));z-index:100}
+
+/* hero */
+.hero{padding:40px 0 20px}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(150px,auto);gap:14px}
+.bt{grid-column:span 2;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;color:var(--text)}
+a.bt:hover{text-decoration:none;transform:translateY(-3px);transition:.2s}
+.bt-photo{grid-row:span 3;padding:0}
+.bt-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.bt-name{grid-column:span 4;background:linear-gradient(135deg,var(--accent),#7c3aed 60%,var(--accent2));color:#fff;border:none}
+.bt-name h1{font-size:clamp(2.6rem,6vw,4.8rem);letter-spacing:-.04em;line-height:.95;margin:0}
+.bt-name .bl{color:rgba(255,255,255,.8)}
+.bt h3{font-size:1.25rem;margin:8px 0}
+.bl{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.bs{color:var(--muted);font-size:.9rem}
+@media(max-width:860px){.bento{grid-template-columns:1fr 1fr}.bt{grid-column:span 1}.bt-photo{grid-column:span 2;grid-row:auto;height:380px}.bt-name{grid-column:span 2}}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.82rem;color:var(--muted);margin-bottom:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1.08;letter-spacing:-.035em;margin-bottom:16px}
+.grad{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{font-size:1.1rem;color:var(--muted);max-width:540px;margin-bottom:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.socials{display:flex;gap:14px;font-size:.9rem;color:var(--muted);flex-wrap:wrap}
+.socials a{color:var(--muted)}
+.socials a:hover{color:var(--accent)}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;display:block}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:50px}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:20px;text-align:center}
+.stat b{display:block;font-size:1.9rem;letter-spacing:-.02em;background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:.82rem;color:var(--muted)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:start}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}}
+.avatar{width:100%;aspect-ratio:2/3;border-radius:24px;background:linear-gradient(135deg,var(--accent),#7c3aed 55%,var(--accent2));display:grid;place-items:center;color:#fff;font-size:4.5rem;font-weight:800;letter-spacing:-.04em;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar:has(img)::after{display:none}
+.avatar::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 25% 20%,rgba(255,255,255,.28),transparent 55%)}
+.facts{list-style:none;margin-top:16px;font-size:.9rem;color:var(--muted)}
+.facts li{padding:6px 0;border-bottom:1px dashed var(--line)}
+.facts li b{color:var(--text);font-weight:600}
+.about p{margin-bottom:14px;color:var(--muted)}
+.about p strong{color:var(--text)}
+
+/* timeline */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--accent2));opacity:.5}
+.job{position:relative;margin-bottom:26px}
+.job::before{content:"";position:absolute;left:-28px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.job-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;align-items:baseline;margin-bottom:4px}
+.job h3{font-size:1.15rem;letter-spacing:-.01em}
+.job .when{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted)}
+.job .org{color:var(--accent);font-weight:600;font-size:.92rem;margin-bottom:10px}
+.job h4{font-size:.98rem;margin:16px 0 6px}
+.job ul{padding-left:18px;color:var(--muted);font-size:.94rem}
+.job li{margin-bottom:6px}
+.job li b{color:var(--text)}
+.metrics{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.metric{font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line)}
+details.more summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:.9rem;margin-top:10px;list-style:none}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::after{content:" ▾"}
+details.more[open] summary::after{content:" ▴"}
+
+/* projects */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filter{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;font-family:inherit;font-size:.88rem;font-weight:500}
+.filter.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px}
+.proj{padding:0;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.proj:hover{transform:translateY(-5px)}
+.proj .art{background:var(--surface2);border-bottom:1px solid var(--line)}
+.proj .art svg{display:block;width:100%;height:auto}
+.proj .body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.proj h3{font-size:1.1rem;letter-spacing:-.01em}
+.proj p{color:var(--muted);font-size:.92rem}
+.proj .tags{margin-top:auto}
+.proj .foot{display:flex;gap:14px;font-size:.88rem;font-weight:600}
+.badge{align-self:flex-start;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:6px;background:rgba(245,158,11,.15);color:#d97706}
+.proj.hide{display:none}
+
+
+/* edu */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.cert-group{margin-top:28px}
+.cert-group h3{font-size:1.1rem;margin-bottom:14px}
+.cert-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.cert-tile{position:relative;text-align:center;padding:22px 20px 20px;border-radius:12px;background:linear-gradient(180deg,var(--accent-soft),transparent 60%),var(--surface);border:2px solid var(--accent);box-shadow:var(--shadow),inset 0 0 0 5px var(--surface),inset 0 0 0 6px var(--line)}
+.cert-tile .ct-top{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.cert-tile h4{font-size:1.08rem;line-height:1.3;margin:10px 0 8px;letter-spacing:-.01em}
+.cert-tile .ct-rule{width:56px;height:2px;margin:0 auto 10px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.cert-tile .ct-sub{font-size:.85rem;color:var(--text);font-weight:700}
+.cert-tile .ct-seal{margin-top:12px;font-size:1.5rem}
+.cert{list-style:none}
+.cert li{padding:12px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.cert li:last-child{border:none}
+.cert small{display:block;color:var(--muted)}
+.pub{display:flex;gap:18px;align-items:flex-start}
+.pub .ic{flex:none;width:48px;height:48px;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center;font-size:1.4rem}
+
+/* contact */
+.contact{text-align:center}
+.contact .card{padding:50px 24px;background:linear-gradient(135deg,var(--accent-soft),transparent),var(--surface)}
+.contact h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+.contact p{color:var(--muted);max-width:520px;margin:10px auto 26px}
+.contact .cta{justify-content:center}
+footer{padding:30px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,80px);background:var(--text);color:var(--bg);padding:10px 18px;border-radius:10px;font-size:.88rem;transition:.3s;z-index:200}
+.toast.show{transform:translate(-50%,0)}
+
+/* reveal + hero animation */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+.fl{animation:float 5s ease-in-out infinite}
+.fl:nth-child(2n){animation-delay:-1.5s}
+.fl:nth-child(3n){animation-delay:-3s}
+.pl{animation:pulse 3s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media print{header,.progress,.toast,.filters,.cta,.icon-btn{display:none}section{padding:24px 0}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#top">shikhar<span>.raj</span></a>
+      <div class="links" id="links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#publication">Publication</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="icon-btn" id="theme" aria-label="Toggle theme" title="Toggle theme">◐</button>
+        <button class="icon-btn burger" id="burger" aria-label="Menu">☰</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="bento">
+      <div class="bt bt-photo reveal"><img src="photo.jpeg" alt="Shikhar Raj"></div>
+      <div class="bt bt-name reveal" style="justify-content:center"><h1>Shikhar Raj</h1></div>
+      <div class="bt reveal"><div><div class="bl">Currently</div><h3>Docuedge at Deloitte</h3><p class="bs">Turning unstructured documents into structured data and searchable knowledge.</p></div></div>
+      <div class="bt reveal" style="justify-content:flex-start;gap:10px"><div class="bl">Education</div><div><b>B.Tech. – Biosciences &amp; Bioengineering</b><p class="bs">IIT Guwahati</p></div></div>
+      <a class="bt reveal" href="https://link.springer.com/article/10.1007/s10441-026-09536-5" target="_blank" rel="noopener"><div class="bl">Published</div><div><b>Pitchfork Bifurcation in a Coupled Cell System</b><p class="bs"><i>Acta Biotheoretica</i>, 2026 ↗</p></div></a>
+      <div class="bt reveal"><div class="bl">Contact</div><div class="bs"><a href="mailto:shikhar.raj.2020@gmail.com" style="display:block;color:var(--text);font-weight:600">✉ shikhar.raj.2020@gmail.com</a><a href="tel:+917338396396" style="display:block;color:var(--text);font-weight:600;margin-top:4px">📞 +91-7338396396</a><a href="https://linkedin.com/in/shikhar-raj/" target="_blank" rel="noopener" style="display:block;color:var(--text);font-weight:600;margin-top:4px">in linkedin.com/in/shikhar-raj ↗</a></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap reveal">
+    <div class="eyebrow">01 · About</div>
+    <h2>A bit about me</h2>
+    <div class="about-grid">
+      <div class="about">
+        <p>I am a <strong>passionate problem solver</strong> who is fascinated by the intersection of <strong>AI and Biotechnology</strong>. I love reading up about the fascinating ways in which nature adapts to various harsh circumstances. The world of <strong>synthetic biology</strong> is extremely fascinating since it opens up a whole new plethora of opportunities to solve day-to-day problems by taking inspiration from nature.</p>
+        <p>Professionally, I am a <strong>Data Scientist</strong> who has gained deep expertise in the fields of <strong>ML, DL, Gen AI and Agentic AI</strong>. Through my career at Deloitte, I have worked on <strong>Docuedge</strong>, a platform that turns messy, unstructured documents into structured data and searchable knowledge. My research experience during my undergraduate years has helped me work in the fields of <strong>Bioinformatics and Systems and Quantitative Biology</strong>.</p>
+        <p>Apart from work, I am a <strong>travel and adventure enthusiast</strong>, and I consider forests and wildlife my second home. I might be physically here, but my heart is lost in the forests of <strong>Kanchenjunga</strong>. Feel free to reach out to me if you plan to do an alpine trek someday!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:var(--surface2)">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">02 · Experience</div>
+      <h2>Where I've worked</h2>
+      <p class="lead">Industry work and research roles.</p>
+    </div>
+    <div class="timeline">
+
+      <article class="job card reveal">
+        <div class="job-head"><h3>Data Management Engineer I</h3><span class="when">Aug 2025 – Present</span></div>
+        <div class="org">Deloitte · Hyderabad</div>
+        <div>
+          <span class="chip">AWS Textract</span><span class="chip">Step Functions</span><span class="chip">Bedrock</span><span class="chip">S3</span><span class="chip">OneDrive</span><span class="chip">FastAPI</span><span class="chip">React</span><span class="chip">Django</span><span class="chip">GraphRAG</span><span class="chip">LLMs</span>
+        </div>
+
+        <h4>Docuedge Capture (Intelligent Document Processing)</h4>
+        <p style="color:var(--muted);font-size:.94rem">A tool that extracts data from unstructured sources using Textract and LLMs, orchestrated via Step Functions.</p>
+        <ul>
+          <li><b>Health insurance client:</b> standardised and extracted claim records from complex Excel and PDF formats across <b>24 TPAs</b> at <b>95% accuracy in 10 weeks</b> ($750k engagement). The data feeds data-engineering pipelines on a medallion architecture for claims analysis.</li>
+          <li><b>Banking client:</b> integrated Capture into existing workflows to extract income verification and impound statement data. Accuracy on complex documents rose to <b>90–92%</b>, and cost fell from <b>12¢ to ~5¢ per page</b> within 12 weeks.</li>
+        </ul>
+
+        <h4>Docuedge Discovery</h4>
+        <ul>
+          <li>Built a crawler that connects to repositories (S3, OneDrive) and scans GBs of unstructured files (PDFs, Word).</li>
+          <li>Extracts industry- and use-case-specific metadata and builds a knowledge base with <b>vector embeddings and knowledge graphs (GraphRAG)</b>. It links relationships between documents for cross-document semantic querying, with citations.</li>
+          <li>Added document-validity checks and web-search integration, and configured SSO via Cognito and Entra ID.</li>
+        </ul>
+      </article>
+
+      <article class="job card reveal">
+        <div class="job-head"><h3>Research Intern · EGFR Signalling</h3><span class="when">May 2024 – Mar 2025</span></div>
+        <div class="org">CSB Lab, IISc Bangalore · under Prof. Mohit K. Jolly</div>
+        <p style="color:var(--muted);font-size:.94rem"><b style="color:var(--text)">Modeling Dynamics of Adherens Junctions on Activation of EGFR Signalling</b></p>
+        <details class="more"><summary>Details</summary>
+          <ul style="margin-top:8px">
+            <li>Explored the reaction network of EGFR trafficking, and the transcriptional and PTM influence of p-EGFR on E-cadherin levels.</li>
+            <li>Ran parameter-sensitivity analysis of E-cad levels and the duration of biphasic recovery after an EGF impulse.</li>
+          </ul>
+          <div style="margin-top:8px"><span class="chip">SciPy odeint</span><span class="chip">Matplotlib</span><span class="chip">pandas</span><span class="chip">MATLAB dde23</span></div>
+        </details>
+      </article>
+
+      <article class="job card reveal">
+        <div class="job-head"><h3>Undergraduate Research Assistant</h3><span class="when">Aug 2023 – Dec 2024</span></div>
+        <div class="org">IIT Guwahati · under Prof. Biplab Bose</div>
+        <p style="color:var(--muted);font-size:.94rem"><b style="color:var(--text)">Bifurcation in a Collective System with Interaction</b></p>
+        <details class="more"><summary>Details</summary>
+          <ul style="margin-top:8px">
+            <li>Analysed synchronisation in an ensemble of interacting cells whose independent members undergo a pitchfork bifurcation.</li>
+            <li>Investigated how homogeneous and heterogeneous states are distributed in the interacting system.</li>
+            <li>Ran stochastic simulations with Gillespie's algorithm and analysed aberrant behaviour.</li>
+          </ul>
+          <div style="margin-top:8px"><span class="chip">MATLAB MatCont</span><span class="chip">Julia Gillespie.jl</span><span class="chip">DataFrames.jl</span><span class="chip">Gadfly.jl</span><span class="chip">Sigmaplot</span><span class="chip">XPPAUT</span></div>
+        </details>
+      </article>
+
+      <article class="job card reveal">
+        <div class="job-head"><h3>Undergraduate Research Assistant</h3><span class="when">Jan 2023 – May 2025</span></div>
+        <div class="org">IIT Guwahati · under Prof. Anil M. Limaye</div>
+        <p style="color:var(--muted);font-size:.94rem"><b style="color:var(--text)">Analysis of NGS Data of Breast Cancer Cell Lines using RNA-Seq</b></p>
+        <details class="more"><summary>Details</summary>
+          <ul style="margin-top:8px">
+            <li>Ran RNA-Seq analysis on a dataset of <b>50,000+ genes</b> to obtain gene expression patterns using DESeq2.</li>
+            <li>Identified <b>600+ differentially expressed genes</b> using volcano plots, PCA plots and heatmaps, and clustered similar genes.</li>
+            <li>Carried out pathway analysis on the differentially expressed gene sets using GSEA, Gene Ontology and KEGG.</li>
+          </ul>
+          <div style="margin-top:8px"><span class="chip">DESeq2</span><span class="chip">ggplot2</span><span class="chip">Tidyverse</span><span class="chip">Gene Ontology</span><span class="chip">KEGG</span><span class="chip">GSEA</span></div>
+        </details>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">03 · Projects</div>
+      <h2>Things I've built</h2>
+      <p class="lead">Agentic systems, ML and computational biology.</p>
+      <div class="filters" id="filters">
+        <button class="filter on" data-f="all">All</button>
+        <button class="filter" data-f="genai">GenAI &amp; Agents</button>
+        <button class="filter" data-f="ml">Machine Learning</button>
+        <button class="filter" data-f="bio">Bioinformatics</button>
+      </div>
+    </div>
+    <div class="proj-grid">
+
+      <article class="card proj reveal" data-cat="genai">
+        <div class="art">
+          <svg viewBox="0 0 400 190" fill="none" font-family="JetBrains Mono,monospace" font-size="11" text-anchor="middle">
+            <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8z" fill="var(--accent)"/></marker></defs>
+            <g stroke="var(--accent)" stroke-width="1.6" marker-end="url(#ar)">
+              <line x1="110" y1="95" x2="150" y2="95"/><line x1="250" y1="95" x2="290" y2="95"/><line x1="200" y1="62" x2="200" y2="38" /><line x1="200" y1="128" x2="200" y2="152"/>
+            </g>
+            <rect x="20" y="70" width="90" height="50" rx="12" fill="var(--surface)" stroke="var(--line)"/><text x="65" y="92" fill="var(--text)">LangGraph</text><text x="65" y="108" fill="var(--muted)">agent</text>
+            <rect x="152" y="68" width="96" height="54" rx="12" fill="url(#hg)"/><text x="200" y="100" fill="#fff" font-weight="700">MCP server</text>
+            <rect x="292" y="70" width="90" height="50" rx="12" fill="var(--surface)" stroke="var(--line)"/><text x="337" y="92" fill="var(--text)">SQLite</text><text x="337" y="108" fill="var(--muted)">HR data</text>
+            <rect x="150" y="8" width="100" height="30" rx="10" fill="var(--surface)" stroke="var(--line)"/><text x="200" y="27" fill="var(--text)">RAG · Chroma</text>
+            <rect x="150" y="152" width="100" height="30" rx="10" fill="var(--surface)" stroke="var(--line)"/><text x="200" y="171" fill="var(--text)">human approval</text>
+            <defs><linearGradient id="hg" x1="0" x2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--accent2)"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>AI-Powered HR Assistant</h3>
+          <p>An HR portal backend exposed through a custom <b>MCP server</b> (stdio and Streamable HTTP) with token auth, input validation and least-privilege tool design.</p>
+          <p>A <b>LangGraph agent</b> handles candidate screening, leave requests with human-in-the-loop approval, and policy Q&amp;A via RAG over HR documents. It's containerised with Docker, deployed to Render, runs evals in CI on every push, and is traced with Langfuse for latency and cost.</p>
+          <div class="tags"><span class="chip">LangGraph</span><span class="chip">FastMCP</span><span class="chip">FastAPI</span><span class="chip">ChromaDB</span><span class="chip">Ollama</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span><span class="chip">Langfuse</span></div>
+          <div class="foot"><a href="https://github.com/YOUR-GITHUB-USERNAME/YOUR-HR-ASSISTANT-REPO" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </article>
+
+      <article class="card proj reveal" data-cat="ml">
+        <div class="art">
+          <svg viewBox="0 0 400 190" fill="none" font-family="JetBrains Mono,monospace" font-size="10">
+            <g stroke="var(--line)" stroke-width="1"><line x1="30" y1="160" x2="380" y2="160"/><line x1="30" y1="120" x2="380" y2="120"/><line x1="30" y1="80" x2="380" y2="80"/><line x1="30" y1="40" x2="380" y2="40"/></g>
+            <path d="M30 130 L70 110 L110 125 L150 85 L190 100 L230 62 L270 78 L310 48 L350 60 L380 36" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+            <path d="M30 138 L70 118 L110 130 L150 94 L190 104 L230 72 L270 82 L310 56 L350 66 L380 44" stroke="var(--accent2)" stroke-width="2" stroke-dasharray="5 5" stroke-linejoin="round"/>
+            <path d="M30 130 L70 110 L110 125 L150 85 L190 100 L230 62 L270 78 L310 48 L350 60 L380 36 L380 160 L30 160Z" fill="var(--accent)" opacity=".1"/>
+            <text x="34" y="20" fill="var(--muted)">demand · actual vs predicted</text>
+            <text x="300" y="20" fill="var(--accent)" font-weight="700">95.07% acc.</text>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>Demand Forecasting · Meal Delivery</h3>
+          <p>Visualisation, feature engineering and statistical analysis of past demand data, followed by model selection and regression analysis. Reached <b>95.07% accuracy</b> with an <b>RMSE of 54.84</b>.</p>
+          <div class="tags"><span class="chip">NumPy</span><span class="chip">pandas</span><span class="chip">scikit-learn</span><span class="chip">LightGBM</span><span class="chip">CatBoost</span><span class="chip">XGBoost</span><span class="chip">Random Forest</span><span class="chip">Seaborn</span></div>
+          <div class="foot"><a href="https://github.com/shikhar-raj/Meal_delivery_system" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </article>
+
+      <article class="card proj reveal" data-cat="ml">
+        <div class="art">
+          <svg viewBox="0 0 400 190" fill="none" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">
+            <g stroke="var(--accent)" stroke-width="1.5" opacity=".7">
+              <line x1="200" y1="46" x2="110" y2="90"/><line x1="200" y1="46" x2="290" y2="90"/><line x1="110" y1="112" x2="65" y2="150"/><line x1="110" y1="112" x2="155" y2="150"/><line x1="290" y1="112" x2="245" y2="150"/><line x1="290" y1="112" x2="335" y2="150"/>
+            </g>
+            <rect x="150" y="22" width="100" height="26" rx="10" fill="var(--surface)" stroke="var(--accent)" stroke-width="2"/><text x="200" y="39" fill="var(--text)">10+ features</text>
+            <rect x="65" y="88" width="90" height="24" rx="10" fill="var(--surface)" stroke="var(--line)"/><text x="110" y="104" fill="var(--text)">XGBoost</text>
+            <rect x="245" y="88" width="90" height="24" rx="10" fill="var(--surface)" stroke="var(--line)"/><text x="290" y="104" fill="var(--text)">LightGBM</text>
+            <g fill="var(--accent2)"><circle cx="65" cy="156" r="9"/><circle cx="245" cy="156" r="9"/></g>
+            <g fill="var(--surface)" stroke="var(--accent)" stroke-width="2"><circle cx="155" cy="156" r="9"/><circle cx="335" cy="156" r="9"/></g>
+            <text x="110" y="182" fill="var(--muted)">promote</text><text x="290" y="182" fill="var(--muted)">ensembles</text>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>Predicting Employee Promotions</h3>
+          <p>A predictive model built on <b>10+ variables</b> to identify employees suitable for managerial promotion, using XGBoost, LightGBM and other ensemble techniques to analyse performance.</p>
+          <div class="tags"><span class="chip">NumPy</span><span class="chip">pandas</span><span class="chip">scikit-learn</span><span class="chip">XGBoost</span><span class="chip">LightGBM</span><span class="chip">Random Forest</span><span class="chip">Seaborn</span></div>
+          <div class="foot"><a href="https://github.com/shikhar-raj/WNS_analytics_wizard" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </article>
+
+      <article class="card proj reveal" data-cat="bio ml">
+        <div class="art">
+          <svg viewBox="0 0 400 190" fill="none" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">
+            <g stroke="var(--accent)" stroke-width="1.3" opacity=".6">
+              <line x1="70" y1="50" x2="140" y2="90"/><line x1="70" y1="140" x2="140" y2="90"/><line x1="140" y1="90" x2="210" y2="55"/><line x1="140" y1="90" x2="215" y2="130"/>
+              <line x1="210" y1="55" x2="290" y2="95"/><line x1="215" y1="130" x2="290" y2="95"/><line x1="210" y1="55" x2="215" y2="130" stroke-dasharray="3 4"/><line x1="290" y1="95" x2="350" y2="50"/><line x1="290" y1="95" x2="350" y2="140"/>
+            </g>
+            <g fill="var(--surface)" stroke="var(--accent)" stroke-width="2"><circle cx="70" cy="50" r="14"/><circle cx="70" cy="140" r="14"/><circle cx="140" cy="90" r="16"/><circle cx="210" cy="55" r="14"/><circle cx="215" cy="130" r="14"/><circle cx="290" cy="95" r="16"/></g>
+            <g fill="var(--accent2)"><circle cx="350" cy="50" r="10"/><circle cx="350" cy="140" r="10"/></g>
+            <text x="70" y="178" fill="var(--muted)">DepMap · TCGA</text><text x="215" y="176" fill="var(--muted)">STRING + paralogs (GNN)</text><text x="350" y="178" fill="var(--muted)">predictions</text>
+          </svg>
+        </div>
+        <div class="body">
+          <span class="badge">In progress</span>
+          <h3>Cancer Dependency Prediction</h3>
+          <p>Predicting cancer dependencies and synthetic lethality from tumour profiles. DepMap CRISPR screens, an <b>autoencoder</b> aligning cell lines with TCGA tumours, and a <b>GNN</b> on the STRING and paralog graph, then predictions for patient tumours with no druggable driver.</p>
+          <div class="tags"><span class="chip">Deep Learning</span><span class="chip">GNN</span><span class="chip">Autoencoder</span><span class="chip">DepMap</span><span class="chip">TCGA</span><span class="chip">STRING</span></div>
+        </div>
+      </article>
+
+      <article class="card proj reveal" data-cat="bio">
+        <div class="art">
+          <svg viewBox="0 0 400 190" fill="none" font-family="JetBrains Mono,monospace" font-size="10">
+            <g stroke="var(--line)"><line x1="30" y1="165" x2="380" y2="165"/><line x1="30" y1="20" x2="30" y2="165"/></g>
+            <path d="M30 150 C70 148 80 40 120 40 C160 40 170 120 210 125 C250 130 270 85 380 80" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M30 150 C70 148 80 70 120 72 C160 74 175 118 215 122 C255 126 280 100 380 96" stroke="var(--accent2)" stroke-width="2" stroke-dasharray="4 5"/>
+            <text x="34" y="16" fill="var(--muted)">E-cadherin level after EGF impulse</text>
+            <text x="300" y="182" fill="var(--muted)">time →</text>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>EGFR → E-cadherin Dynamics</h3>
+          <p>Research internship at IISc: ODE/DDE modelling of EGFR trafficking and its effect on adherens junctions, with sensitivity analysis of E-cadherin biphasic recovery.</p>
+          <div class="tags"><span class="chip">SciPy</span><span class="chip">MATLAB dde23</span><span class="chip">Systems Biology</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" style="background:var(--surface2)">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">04 · Certifications</div>
+      <h2>Courses &amp; credentials <a href="https://www.dropbox.com/scl/fo/rggpto9byg7s5gjrn2pnq/AJz8Jchhu2S574G8VDTg3F4?rlkey=8birz5ovyc0sb7r1iv5shuaho&amp;st=a5ifqqj0&amp;dl=0" target="_blank" rel="noopener" title="View all certificates on Dropbox" class="chip" style="font-size:.75rem;padding:4px 12px;vertical-align:middle;margin-left:10px;font-weight:500;letter-spacing:0">Dropbox link ↗</a></h2></div>
+    <div class="cert-group reveal">
+      <h3>GenAI and Agentic AI</h3>
+      <div class="cert-tiles">
+        <div class="cert-tile"><div class="ct-top">Certificate</div><h4>Claude Certified Developer Associate (CCDV-F)</h4><div class="ct-rule"></div><div class="ct-sub">Anthropic</div><div class="ct-seal">🏅</div></div>
+        <div class="cert-tile"><div class="ct-top">Certificate</div><h4>Agentic AI Practicum</h4><div class="ct-rule"></div><div class="ct-sub">Deloitte Consulting LLP</div><div class="ct-seal">🏅</div></div>
+      </div>
+    </div>
+    <div class="cert-group reveal">
+      <h3>Machine Learning Specialization</h3>
+      <div class="cert-tiles">
+        <div class="cert-tile"><div class="ct-top">Certificate</div><h4>Supervised Machine Learning</h4><div class="ct-rule"></div><div class="ct-sub">DeepLearning.AI</div><div class="ct-seal">🏅</div></div>
+        <div class="cert-tile"><div class="ct-top">Certificate</div><h4>Advanced Learning Algorithms</h4><div class="ct-rule"></div><div class="ct-sub">DeepLearning.AI</div><div class="ct-seal">🏅</div></div>
+        <div class="cert-tile"><div class="ct-top">Certificate</div><h4>Data Science Essentials</h4><div class="ct-rule"></div><div class="ct-sub">Deloitte AI Academy</div><div class="ct-seal">🏅</div></div>
+      </div>
+    </div>
+    <div class="cert-group reveal">
+      <h3>Bioinformatics</h3>
+      <div class="cert-tiles">
+        <div class="cert-tile"><div class="ct-top">Certificate</div><h4>Algorithms for DNA Sequencing</h4><div class="ct-rule"></div><div class="ct-sub">Johns Hopkins University</div><div class="ct-seal">🏅</div></div>
+        <div class="cert-tile"><div class="ct-top">Certificate</div><h4>Python for Genomics Data Science</h4><div class="ct-rule"></div><div class="ct-sub">Johns Hopkins University</div><div class="ct-seal">🏅</div></div>
+        <div class="cert-tile"><div class="ct-top">Certificate</div><h4>AI/ML in Cancer Genomics</h4><div class="ct-rule"></div><div class="ct-sub">Biotechnika</div><div class="ct-seal">🏅</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATION -->
+<section id="publication">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">05 · Publication</div>
+      <h2>Published work</h2>
+    </div>
+    <a class="card pub reveal" style="margin-top:22px;color:inherit;text-decoration:none" href="https://link.springer.com/article/10.1007/s10441-026-09536-5" target="_blank" rel="noopener">
+      <div class="ic">📄</div>
+      <div>
+        <b>Pitchfork Bifurcation in a Coupled Cell System</b>
+        <div style="color:var(--muted);font-size:.92rem">Raj S., Bose B. · <i>Acta Biotheoretica</i>, 74(3), 2026</div>
+        <div style="color:var(--accent);font-weight:600;font-size:.88rem;margin-top:6px">Read on Springer ↗</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact" style="background:var(--surface2)">
+  <div class="wrap reveal">
+    <div class="card">
+      <div class="eyebrow">06 · Contact</div>
+      <h2>Let's build something together</h2>
+      <p>I'm open to conversations about AI engineering, document intelligence and agentic systems. The fastest way to reach me is email.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:shikhar.raj.2020@gmail.com">✉ Email me</a>
+        <button class="btn" id="copy">Copy email</button>
+        <a class="btn" href="https://linkedin.com/in/shikhar-raj/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="tel:+917338396396">📞 +91-7338396396</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Shikhar Raj · Built with plain HTML, CSS and a little JavaScript.</footer>
+<div class="toast" id="toast">Email copied</div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+$('#yr').textContent=new Date().getFullYear();
+
+// theme
+const root=document.documentElement;
+try{const t=localStorage.getItem('theme'); if(t) root.dataset.theme=t;}catch(e){}
+$('#theme').onclick=()=>{
+  const dark=root.dataset.theme? root.dataset.theme==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme=dark?'light':'dark';
+  try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}
+};
+
+// mobile menu
+$('#burger').onclick=()=>$('#links').classList.toggle('open');
+$$('#links a').forEach(a=>a.addEventListener('click',()=>$('#links').classList.remove('open')));
+
+// scroll progress + active link
+const secs=$$('main section[id]'), navs=$$('#links a');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  $('#progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  let cur='';
+  secs.forEach(s=>{ if(scrollY>=s.offsetTop-120) cur=s.id; });
+  navs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+},{passive:true});
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+$$('.reveal').forEach(el=>io.observe(el));
+
+// project filter
+$$('.filter').forEach(b=>b.onclick=()=>{
+  $$('.filter').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+  const f=b.dataset.f;
+  $$('.proj').forEach(p=>p.classList.toggle('hide', f!=='all' && !p.dataset.cat.split(' ').includes(f)));
+});
+
+// copy email
+$('#copy').onclick=async()=>{
+  try{await navigator.clipboard.writeText('shikhar.raj.2020@gmail.com')}catch(e){}
+  const t=$('#toast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1800);
+};
+</script>
+</body>
+</html>
